@@ -1,0 +1,4 @@
+In this video I will show How To Convert Pratik text into speech. we are going to use gtts python package to TEXT TO SPEECH IN PYTHON. gTTS stands for Google Text-to-Speech. gTTs is a Python library and Command line tool to interface with Google Translate's text-to-speech API. it Writes text to spoken mp3 data to a file or stdout. So we are going to learn  How to Use the Speech Recognition Module GTTS usinng Python 3. text to speech conversion using python is goinng to be few lines of code.
+
+
+ 
