@@ -6,8 +6,11 @@ from matplotlib import pyplot as plt
 
 
 # load the two input images
-img_1 = cv2.imread("images/card.jpg")
-img_2 = cv2.imread("images/card2.jpg")
+img_1 = cv2.imread("images/test.jpg")
+img_2 = cv2.imread("images/test2.jpg")
+
+# img_1 = cv2.imread('template/test.jpg')
+# img_2 = cv2.imread('template/test3.jpg')
 
 #-----------------check both img size ----------------------------------
 if img_1.shape == img_2.shape:

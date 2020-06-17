@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 
 #----------------open image------------------------
 img = io.imread("images/image.jpg")
-img1 = io.imread("images/test.jpg", as_gray=True)
+img1 = io.imread("template/1.jpeg", as_gray=True)
 #------------------non-Local filter----------------
 img_exp = exposure.equalize_hist(img)
 img_fg = filters.threshold_otsu(img1)
