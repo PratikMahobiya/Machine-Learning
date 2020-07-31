@@ -1,7 +1,7 @@
 import cv2
 import pytesseract
 
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture("rtsp://admin:password@123@192.168.1.64:554/1")
 
 cv2.namedWindow("test")
 
@@ -12,7 +12,7 @@ while True:
     if not ret:
         print("failed to capture an image")
         break
-    cv2.imshow("test", frame)
+    cv2.imshow("test", cv2.resize(frame, None, fx = 0.5, fy = 0.5))
 
     k = cv2.waitKey(1)
     if k%256 == 27:
