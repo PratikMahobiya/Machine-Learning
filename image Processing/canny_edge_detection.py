@@ -13,7 +13,7 @@ MASK_COLOR = (0.0,0.0,1.0) # In BGR format
 #== Processing =======================================================================
 
 #-- Read image -----------------------------------------------------------------------
-img = cv2.imread("template/stone.jpg")
+img = cv2.imread("template/test1.jpeg")
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
 #-- Edge detection -------------------------------------------------------------------

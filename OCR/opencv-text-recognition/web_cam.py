@@ -79,13 +79,14 @@ net = cv2.dnn.readNet("frozen_east_text_detection.pb")
 
 
 # load the input image and grab the image dimensions
-cam = cv2.VideoCapture("rtsp://admin:password@123@192.168.1.64:554/1")
+# cam = cv2.VideoCapture("rtsp://admin:password@123@192.168.1.64:554/1")
+cam = cv2.VideoCapture(0)
 cv2.namedWindow("test")
 
 while  True:
 	ret, image = cam.read()
     # Open Camera
-	cv2.imshow("test", cv2.resize(image, None, fx = 0.3, fy = 0.3))
+	cv2.imshow("test", cv2.resize(image, None, fx = 0.5, fy = 0.5))
 
 	#Wait For a pressed key
 	k = cv2.waitKey(1)
@@ -162,8 +163,7 @@ while  True:
 		# loop over the results
 		for ((startX, startY, endX, endY), text) in results:
 			# display the text OCR'd by Tesseract
-			print("OCR TEXT")
-			print("========")
+			print("Text Found:- ", end=" ")
 			print("{}\n".format(text))
 
 			# strip out non-ASCII text so we can draw the text on the image
@@ -177,7 +177,7 @@ while  True:
 				cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 0, 255), 3)
 
 			# show the output image
-			cv2.imshow("Text Detection", cv2.resize(output, None, fx = 0.3, fy = 0.3))
+			cv2.imshow("Text Detection", cv2.resize(output, None, fx = 0.5, fy = 0.5))
 			cv2.waitKey(0)
 
 	elif k%256 == 27:
