@@ -17,7 +17,7 @@ login_field = driver.find_element_by_name("session[username_or_email]")
 login_field.clear()
 
 # enter username
-login_field.send_keys("prashant.20173@gmail.com")
+login_field.send_keys("xyz@gmail.com")
 time.sleep(1)
 
 #get the password textbox
